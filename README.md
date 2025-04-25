@@ -1,50 +1,68 @@
-# Welcome to your Expo app 👋
+# M-Pesa Transactions Parser
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+This React Native application automates the management of M-Pesa paybill transactions for any organization. The app extracts M-Pesa transaction data from SMS messages, organizes it into structured data (Transaction ID, Amount, Time, etc.), and provides export functionality to Excel format with weekly to monthly and custom cutoff periods. This app was made to automate a painpoint in my local church where transactions were manually transferred to excel from the official church paybill. its still a WIP. have fun with it, I sure did!
 
-1. Install dependencies
+## Features
 
-   ```bash
+- **M-Pesa SMS Parsing**: Automatically extracts transaction data from paybill messages
+- **Data Organization**: Structures data by Transaction ID, Amount, Date/Time, and Sender
+- **Weekly Reports**: Configurable weekly cutoff (Sunday to Saturday) for accounting purposes
+- **Excel Export**: One-click export of transaction data to Excel format
+- **Authentication**: Simple authentication system to protect sensitive financial data
+- **Beautiful UI**: Clean, intuitive interface designed for ease of use
+
+## Technical Stack
+
+- React Native
+- Expo
+- React Navigation
+- Expo SMS Reader
+- XLSX Library for Excel export
+- AsyncStorage for local data storage
+- React Native Paper for UI components
+
+## Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/your-username/xyz-sda-mpesa-parser.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd xyz-sda-mpesa-parser
+   ```
+
+3. Install dependencies:
+   ```
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-    npx expo start
+4. Start the development server:
+   ```
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Usage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. **Login**: Use the provided credentials to access the app
+2. **Parse Messages**: The app automatically reads and parses M-Pesa messages
+3. **View Transactions**: Browse through parsed transactions in a clean list format
+4. **Export Data**: Generate Excel reports with weekly cutoff periods
+5. **Settings**: Configure app preferences and export parameters
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Permissions
 
-## Get a fresh project
+The app requires the following permissions:
+- SMS reading permission
+- Storage permission (for saving Excel files)
 
-When you're ready, run:
+## Contributing
 
-```bash
-npm run reset-project
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## License
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License - see the LICENSE file for details.
